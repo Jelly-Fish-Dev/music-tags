@@ -18,18 +18,20 @@ package() {
         install -m644 "$startdir/$f" "$appdir/"
     done
 
-    # SVG icon
+    # SVG icon — in appdir for runtime use, and in icons for the desktop
+    install -m644 "$startdir/Anonymous-Music-Folder-Icon.svg" "$appdir/"
     install -Dm644 "$startdir/Anonymous-Music-Folder-Icon.svg" \
         "$pkgdir/usr/share/icons/hicolor/scalable/apps/music-tags.svg"
 
-    # Python deps not in official repos
-    pip install --root="$pkgdir" --prefix=/usr --no-warn-script-location \
+    # Python deps not in official repos — bundled into the app dir
+    pip install --target="$appdir/lib" --no-warn-script-location \
         mutagen musicbrainzngs tkinterdnd2 sv-ttk cairosvg
 
     # Launcher
     install -dm755 "$pkgdir/usr/bin"
     cat > "$pkgdir/usr/bin/music-tags" << 'EOF'
 #!/bin/bash
+export PYTHONPATH="/usr/share/music-tags/lib${PYTHONPATH:+:$PYTHONPATH}"
 exec python /usr/share/music-tags/main.py "$@"
 EOF
     chmod 755 "$pkgdir/usr/bin/music-tags"
