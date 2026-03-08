@@ -1,5 +1,0 @@
-{
-    "python.defaultInterpreterPath": "/home/jelly/Python/Music Tags/.venv/bin/python",
-    "github.copilot.enable": { "*": false },
-    "github.copilot.chat.enabled": false
-}
