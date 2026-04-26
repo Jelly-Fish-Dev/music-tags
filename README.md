@@ -32,15 +32,15 @@
 
   ```pip install -r requirements.txt```
 
-  Usage
+  ### Usage
 
   python main.py
 
-  Credits
+  ### Credits
 
   App icon: Music Folder Icon from OpenClipart, public domain.
 
-  MusicBrainz
+  ### MusicBrainz
 
   Tag fetching uses the MusicBrainz API. Please respect their rate limiting
   policy (max 1 request/second, descriptive User-Agent required).
