@@ -42,3 +42,4 @@ App icon: [Music Folder Icon](https://openclipart.org/detail/23730/music-folder-
 
  ## License
   MIT — see [LICENSE](LICENSE) for details.
+Dependencies `mutagen` and `cairosvg` are licensed under the LGPL.
