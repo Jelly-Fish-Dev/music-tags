@@ -39,3 +39,6 @@ python main.py
 ## Credits
 
 App icon: [Music Folder Icon](https://openclipart.org/detail/23730/music-folder-icon) from OpenClipart, public domain.
+
+ ## License
+  MIT — see [LICENSE](LICENSE) for details.
